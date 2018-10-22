@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-app=express();
+const app=express();
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 // Static directory
@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 // requiring handlebars and setting 'main'.handlebars as primary
 const exhbs = require("express-handlebars");
 app.engine("handlebars", exhbs({defaultLayout: "main"}));
+// app.engine("handlebars", exhbs({defaultLayout: "/views/layouts/main"}));
 app.set("view engine", "handlebars");
 // Routes
 require("./routes/api-routes.js")(app);

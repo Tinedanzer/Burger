@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>BossBaby's Burger!</title>
+    {{!-- <base  href="/"> --}}
     {{!-- link to favicon --}}
-    <link rel="icon" href="../../public/assets/img/burger.png" />
+    <link rel="icon" href="/assets/img/burger.png" />
     {{!-- link to bootstrap cdn --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     {{!-- link to customized css--}}
-    <link rel="stylesheet" href="../../public/assets/css/burger_style.css" type="text/css" />
+    
+    {{!-- <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" /> --}}
     {{!-- link to jquery cdn--}}
     <script src="https://code.jquery.com/jquery.js"></script>
-    {{!-- link to customized js--}}
-    <script src="../../public/assets/js/burgermain.js"></script>
 </head>
 <body>
-    {{{ body }}}
+    {{{body}}}
 </body>
+{{!-- link to customized js--}}
+<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
+    <script type= "text/javascript" src="/assets/js/burgermain.js"></script>
 </html>

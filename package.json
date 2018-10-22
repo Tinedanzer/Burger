@@ -1,7 +1,7 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "A sequelize, express, mysql, node app",
+  "description": "A sequelize, express, mysql, node handlebars app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,12 +14,13 @@
     "sequelize",
     "express",
     "node",
-    "mysql"
+    "mysql",
+    "handlbars"
   ],
   "author": "John Hill",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tinedanzer/Burger/issues"
+    "url": "https://github.com/Tinedanzer/Burger/"
   },
   "homepage": "https://github.com/Tinedanzer/Burger#readme",
   "dependencies": {
