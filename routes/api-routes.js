@@ -12,18 +12,19 @@ module.exports = function(app) {
       res.json(brgerObj)})
   });
   // updating devoured state with a put request
+  // using req.params for finding id. console.log() was a great help here
   app.put("/api/burgers/:id", function(req, res) {
+    console.log(req.params);
     db.Burger.update({
-      name: req.body.name,
       devoured: req.body.devoured},
       {
       where:{
-        id: req.body.id
+        id: req.params.id
       }
      }
      ).then(function(result){
        let brgerObj= {Burger:result}
-       res.render('index', brgerObj)
+       res.render( brgerObj)
      })
      .catch(function(err) {
        // Whenever a validation or flag fails, an error is thrown
@@ -58,13 +59,13 @@ module.exports = function(app) {
 
   // DELETE route for deleting burgers. We can access the ID of the burger to delete in
   // make this link to button on the front-side in the future, then delete comment.
-  app.delete("/api/burgersdel", function(req, res) {
+  // app.delete("/api/burgersdel", function(req, res) {
   //  db.Burger.destroy({
   //    where: {
   //      id:req.params.id
   //    }
   //  }).then(result=>res.json(result))
   // });
-  db.Burger.destroy({}).findAll({}).then(result=>res.json(result))
- });
+//   db.Burger.destroy({}).findAll({}).then(result=>res.json(result))
+//  });
 }

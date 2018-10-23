@@ -4,15 +4,14 @@ $(document).ready(function() {
       console.log("this is id:", id)
   
       let newState = {
-        devoured: 1
+        devoured: true
       };
-// $.get()
       // Send the PUT request to update data at targetid
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newState
       }).then(function() {
-        // Reload the page to get the updated list
+        // Reload the page to get the updated list after the ajax request comes back
         location.reload();
       });
     });
@@ -23,7 +22,6 @@ $(document).ready(function() {
   
       let newBurger = {
         name: $("#booger").val().trim(),
-        //since you just added the burger, the assumption is that you can only eat it after it is added so this will always be 0 when you add it
         devoured: false
       };
       console.log("new burger", newBurger);
