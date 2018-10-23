@@ -1,13 +1,13 @@
 .display-3{
 color: purple
 };
-body{background-color:brown}
-
+body{background-color:brown};
 
 .container{
     background-color:brown;
     float:right
-    ;position:absolute;bottom:400px;width:800px;left:500px
+    ;position:absolute;bottom:250px;width:800px;left:500px;
+    font-size:20px;
 };
 
 #Aroo{

@@ -3,8 +3,10 @@ const bodyParser = require("body-parser");
 const app=express();
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
+var methodOverride = require('method-override');
 // Static directory
 app.use(express.static("public"));
+app.use(methodOverride('_method'));
 // Sets up the Express app to handle data parsing
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,7 +15,7 @@ app.use(bodyParser.json());
 // requiring handlebars and setting 'main'.handlebars as primary
 const exhbs = require("express-handlebars");
 app.engine("handlebars", exhbs({defaultLayout: "main"}));
-// app.engine("handlebars", exhbs({defaultLayout: "/views/layouts/main"}));
+
 app.set("view engine", "handlebars");
 // Routes
 require("./routes/api-routes.js")(app);
