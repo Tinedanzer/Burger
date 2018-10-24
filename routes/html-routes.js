@@ -5,6 +5,7 @@ module.exports = function(app) {
 
 // // rendering index while using main.handlebars; this is understood due to our server file calling Main.js
 // // as the primary building block for express handlebars.
+// to get all  burgers: devoured and not devoured and spread apart in handlebars.
 app.get("/", function(req, res) {
     db.Burger.findAll({
         // where: {

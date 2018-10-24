@@ -1,17 +1,20 @@
+h10{
+    font-size:30px;
+};
 .display-3{
 color: purple
 };
-body{background-color:brown};
+
 .Aroo2{
     background-color:brown
 }
 .container{
     background-color:brown;
     float:right
-    ;position:absolute;bottom:250px;width:800px;left:500px;
+    ;position:absolute;bottom:100px;width:800px;left:500px;
     font-size:20px;
 };
 
-#Aroo{
+/* #Aroo{
     background-color:brown
-}
+}; */

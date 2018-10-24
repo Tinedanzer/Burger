@@ -15,7 +15,17 @@ $(document).ready(function() {
         location.reload();
       });
     });
-  
+    // deleting all burgers
+    $(".removeAll").on("click", function(event){
+    $.ajax({
+      type:"DELETE",
+      url: "/api/burgersdel",
+    }).then(()=>{
+      location.reload()
+    });
+  });  
+
+  // using Ajax to create a  post route with the database
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
