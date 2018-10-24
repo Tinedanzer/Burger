@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "A sequelize, express, mysql, node handlebars app",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tinedanzer/Burger.git"
@@ -20,9 +18,9 @@
   "author": "John Hill",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tinedanzer/Burger/"
+    "url": "https://rocky-sea-23211.herokuapp.com/"
   },
-  "homepage": "https://github.com/Tinedanzer/Burger#readme",
+  "homepage": "https://rocky-sea-23211.herokuapp.com/",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
@@ -31,5 +29,8 @@
     "mysql2": "^1.6.1",
     "sequelize": "^4.39.1",
     "sequelize-cli": "^5.1.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
